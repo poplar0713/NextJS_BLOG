@@ -1,6 +1,5 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { rainbow } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import { useRef } from 'react'
 
 const CopyButton = ({ target }) => {
   const handleCopy = async () => {
@@ -25,8 +24,6 @@ const CopyButton = ({ target }) => {
 }
 
 export default function CodeBlock({ children }) {
-  const ref = useRef()
-
   return (
     <div className="relative">
       <CopyButton target={children} />
